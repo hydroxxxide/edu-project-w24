@@ -1,0 +1,33 @@
+server:
+  port: 8080
+
+
+
+spring:
+  security:
+    jwt:
+      secret-key: SECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRETSECRET
+      expiration: 3600000
+      refresh-token:
+        expiration: 36000000
+    allowed-origins:
+      http://localhost:3000/
+  datasource:
+    url: jdbc:postgresql://localhost:5432/tinder
+    username: postgres
+    password: postgres
+
+  mail:
+    port: 587
+    host: smtp.gmail.com
+    username: taxventures.dev@gmail.com
+    password: duqaeoqtxgaatlgl
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  jpa:
+    hibernate:
+      ddl-auto: update
