@@ -31,6 +31,9 @@ public class User {
     @Column(nullable = false)
     private String email;
 
+    @OneToOne(cascade = CascadeType.ALL, fetch = FetchType.LAZY, orphanRemoval = true)
+    private Person person;
+
     private String password;
 
     private String confirmationCode;
